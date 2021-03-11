@@ -1,11 +1,7 @@
 import time, sys, requests, os
 
-from os import system
-
 from requests.packages.urllib3.exceptions import InsecureRequestWarning
 requests.packages.urllib3.disable_warnings(InsecureRequestWarning)
-
-system("title " + "웹훅체커키 by 봉순#1234")
 
 try:
     f = open("./webhooks.txt", 'r')
