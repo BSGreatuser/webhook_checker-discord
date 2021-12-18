@@ -52,30 +52,25 @@ print("[!] 웹훅 체킹중...")
 
 for i in webhooks:
     if i.strip() == '':
-        er = er + 1
-        pass
+        er += 1
     try:
         r = requests.get(i.rstrip(), verify=False)
     except:
         err = open("./error.txt", 'w')
         err.write(i.rstrip() + "\n")
-        er = er + 1
-        pass
+        er += 1
 
     try:
-        if not r.status_code == 200:
-            n.write(i.rstrip() + "\n")
-            inv = inv + 1
-            pass
-        elif r.status_code == 200:
+        if r.status_code == 200:
             y.write(i.rstrip() + "\n")
-            v = v + 1
-            pass
+            v += 1
+        elif :
+            n.write(i.rstrip() + "\n")
+            inv += 1
     except:
         err = open("./error.txt", 'w')
         err.write(i.rstrip() + "\n")
-        er = er + 1
-        pass
+        er += 1
 
 f.close()
 n.close()
